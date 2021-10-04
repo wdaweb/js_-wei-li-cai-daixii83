@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const random = (min, max) => {
+      return Math.round(Math.random() * (max - min)) + min
+    }
+
+    const groupA = []
+    while (groupA.length < 6) {
+      const numA = random(1, 38)
+      if (!groupA.includes(numA)) {
+        groupA.push(numA)
+      }
+    }
+    document.write("A區數字是" + groupA.join(',') + "<br>")
+
+    const numB = random(1, 8)
+    document.write("B區數字是" + numB)
+
+
+  </script>
+</body>
+
+</html>
